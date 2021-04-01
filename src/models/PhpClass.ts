@@ -5,9 +5,13 @@ export class PhpClass {
     name: string;
     properties: PhpProperty[] = [];
     functionNames: string[] = [];
+    startLine: number;
+    endLine: number;
     
-    constructor(name: string) {
+    constructor(name: string, startLine: number, endLine: number) {
         this.name = name;
+        this.startLine = startLine;
+        this.endLine = endLine;
     }
     
     hasSetter(propertyName: string) {

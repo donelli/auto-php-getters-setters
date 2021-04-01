@@ -1,13 +1,19 @@
 {
 	"name": "auto-php-getters-setters",
 	"displayName": "Autogenerate PHP Getters & Setters",
-	"description": "",
-	"version": "0.0.1",
+	"description": "Autogenerate getters and/or setters for php classes.",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
+	"keywords": [
+		"php",
+		"getters",
+		"setters"
+	],
 	"categories": [
-		"Other"
+		"Other",
+		"Formatters"
 	],
 	"activationEvents": [
 		"onCommand:auto-php-getters-setters.autoGenerateGettersSetters",

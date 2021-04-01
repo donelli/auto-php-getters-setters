@@ -4,7 +4,7 @@ import { generateGettersAndSetters } from './commands/generate_getters_and_sette
 
 export function activate(context: vscode.ExtensionContext) {
 
-	console.log('active');
+	console.log('active 22');
 	
 	registerCommands(context);
 	
