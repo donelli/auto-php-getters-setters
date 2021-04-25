@@ -32,7 +32,7 @@ export async function generateGettersAndSetters(params: GenerateParams) {
     vscode.window.showErrorMessage('No classes found in this file!');
     return;
   } else if (classes.length === 0) {
-    vscode.window.showInformationMessage('No public properties found in class!');
+    vscode.window.showInformationMessage('No private properties found in class!');
     return;
   }
   
@@ -92,7 +92,7 @@ function findClassesInParsedFile(parsedFile: phpParser.Program): PhpClass[] | un
         switch (property.kind) {
           case 'propertystatement':
             
-            if (property.visibility !== 'public') {
+            if (property.visibility !== 'private') {
               continue;
             }
             
@@ -268,7 +268,7 @@ function applyEdits(selectedClasses: PhpClass[], activeEditor: vscode.TextEditor
       const hasGetter = phpClass.hasGetter(prop.name);
       const hasSetter = phpClass.hasSetter(prop.name);
       
-      let propName = prop.name.substr(0, 1).toUpperCase() + prop.name.substr(1).toLowerCase();
+      let propName = prop.name.substr(0, 1).toUpperCase() + prop.name.substr(1);
       
       if (!hasGetter && params.getters) {
         strReplace += ' '.repeat(tabSize) + 'public function get' + propName + '() {\n';

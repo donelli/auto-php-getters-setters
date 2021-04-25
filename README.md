@@ -1,6 +1,6 @@
 # Autogenerate PHP Getters/Setters
 
-Autogenerate getters and/or setters for php classes.
+Simple autogenerate getters and/or setters for php classes.
 
 ## Commands
 
@@ -9,4 +9,6 @@ Autogenerate getters and/or setters for php classes.
 - Autogenerate PHP: Generate Getters: Generate only Getters
 
 
-## 
+## Suggestions / Bugs
+
+Please open a issue in Github or send me a mail: **eduardopellenz@hotmail.com**

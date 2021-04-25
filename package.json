@@ -1,8 +1,13 @@
 {
 	"name": "auto-php-getters-setters",
 	"displayName": "Autogenerate PHP Getters & Setters",
+	"publisher": "donelli",
+	"repository": {
+		"type": "github",
+		"url": "https://github.com/donelli/auto-php-getters-setters"
+	},
 	"description": "Autogenerate getters and/or setters for php classes.",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
@@ -35,7 +40,20 @@
 				"command": "auto-php-getters-setters.autoGenerateSetters",
 				"title": "Autogenerate PHP: Generate Setters"
 			}
-		]
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "auto-php-getters-setters.autoGenerateGettersSetters"
+				},
+				{
+					"command": "auto-php-getters-setters.autoGenerateGetters"
+				},
+				{
+					"command": "auto-php-getters-setters.autoGenerateSetters"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
